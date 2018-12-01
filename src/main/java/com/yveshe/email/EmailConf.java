@@ -19,16 +19,16 @@ import java.util.LinkedHashMap;
  * @author YvesHe
  *
  */
-public class MailConf implements Serializable {
+public class EmailConf implements Serializable {
     private static final long serialVersionUID = -4351683275570056467L;
 
     private String hostName;
     private int smtpPort;
-    private String mailFrom;
+    private String mailFrom;// 发件人需要与mailUserName保持一致
     private int secureConnectType; // STMP
     private String mailUserName;
     private String mailPassword;
-    private String defFromName;// 默认发送人昵称，可有可无
+    private String defFromName;// 默认发送人昵称(可有可无)
     private final LinkedHashMap<String, String> extraProp = new LinkedHashMap<String, String>();
 
     public String getHostName() {

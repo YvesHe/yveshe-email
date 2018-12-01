@@ -23,7 +23,7 @@ import org.apache.commons.mail.EmailConstants;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.MultiPartEmail;
 
-public class BESMultiPartMail extends MultiPartEmail {
+public class MultiPartEmail_ extends MultiPartEmail {
 
     private final Properties props = new Properties();
 
@@ -71,15 +71,11 @@ public class BESMultiPartMail extends MultiPartEmail {
         // props.setProperty(EmailConstants.MAIL_DEBUG,
         // String.valueOf(this.debug));
 
-        props.setProperty(EmailConstants.MAIL_TRANSPORT_STARTTLS_ENABLE,
-            isStartTLSEnabled() ? "true" : "false");
-        props.setProperty(EmailConstants.MAIL_TRANSPORT_STARTTLS_REQUIRED,
-            isStartTLSRequired() ? "true" : "false");
+        props.setProperty(EmailConstants.MAIL_TRANSPORT_STARTTLS_ENABLE, isStartTLSEnabled() ? "true" : "false");
+        props.setProperty(EmailConstants.MAIL_TRANSPORT_STARTTLS_REQUIRED, isStartTLSRequired() ? "true" : "false");
 
-        props.setProperty(EmailConstants.MAIL_SMTP_SEND_PARTIAL,
-            isSendPartial() ? "true" : "false");
-        props.setProperty(EmailConstants.MAIL_SMTPS_SEND_PARTIAL,
-            isSendPartial() ? "true" : "false");
+        props.setProperty(EmailConstants.MAIL_SMTP_SEND_PARTIAL, isSendPartial() ? "true" : "false");
+        props.setProperty(EmailConstants.MAIL_SMTPS_SEND_PARTIAL, isSendPartial() ? "true" : "false");
 
         if (this.authenticator != null) {
             props.setProperty(EmailConstants.MAIL_SMTP_AUTH, "true");

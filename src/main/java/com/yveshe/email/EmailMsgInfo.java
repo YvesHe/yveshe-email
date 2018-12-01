@@ -13,7 +13,7 @@ package com.yveshe.email;
 import java.io.Serializable;
 import java.util.List;
 
-public class MailMessageInfo implements Serializable {
+public class EmailMsgInfo implements Serializable {
     private static final long serialVersionUID = 3192856067259983601L;
 
     private List<String> mailTos;

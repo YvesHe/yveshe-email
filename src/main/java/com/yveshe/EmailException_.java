@@ -12,10 +12,10 @@ package com.yveshe;
 
 import com.yveshe.core.exception.InfraException;
 
-public class EmailException extends InfraException {
+public class EmailException_ extends InfraException {
     private static final long serialVersionUID = -2875402608569533636L;
 
-    public EmailException(String msg) {
+    public EmailException_(String msg) {
         super(msg);
     }
 
